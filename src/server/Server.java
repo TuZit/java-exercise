@@ -20,16 +20,18 @@ public class Server {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 
+        CorsFilter corsFilter = new CorsFilter();
+
         // 🔧 Admin APIs
-        server.createContext("/admin/products", new AdminProductController(connection));
-        server.createContext("/admin/collections", new AdminCollectionController(connection));
-        server.createContext("/admin/orders", new AdminOrderController(connection));
-        server.createContext("/api/admin/users", new AdminUserController(connection));
+        server.createContext("/admin/products", new AdminProductController(connection)).getFilters().add(corsFilter);
+        server.createContext("/admin/collections", new AdminCollectionController(connection)).getFilters().add(corsFilter);
+        server.createContext("/admin/orders", new AdminOrderController(connection)).getFilters().add(corsFilter);
+        server.createContext("/api/admin/users", new AdminUserController(connection)).getFilters().add(corsFilter);
 
         // 🛍️ Storefront APIs
-        server.createContext("/store/products", new StoreProductController(connection));
-        server.createContext("/store/collections", new StoreCollectionController(connection));
-        server.createContext("/storefront/orders", new StoreOrderController(connection));
+        server.createContext("/store/products", new StoreProductController(connection)).getFilters().add(corsFilter);
+        server.createContext("/store/collections", new StoreCollectionController(connection)).getFilters().add(corsFilter);
+        server.createContext("/storefront/orders", new StoreOrderController(connection)).getFilters().add(corsFilter);
 
         server.start();
         System.out.println("✅ Server running on http://localhost:8080");

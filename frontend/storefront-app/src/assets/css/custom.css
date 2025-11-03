@@ -1,0 +1,90 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --font-family: 'Poppins', sans-serif;
+  --text-color: #343a40;
+  --light-gray: #f1f1f1;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.product-card {
+  border: none; /* Remove default bootstrap border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 0.75rem; /* Rounded corners */
+  overflow: hidden; /* Ensure content respects border-radius */
+}
+
+.product-card:hover {
+  transform: translateY(-8px); /* Lift effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .card-img-top {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.product-card .card-body {
+  padding: 1.25rem;
+}
+
+.product-card .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500/007bff/ffffff?text=Modern+Storefront') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 8rem 0;
+  text-align: center;
+  border-radius: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand strong {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: var(--text-color) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.footer {
+  background-color: var(--text-color);
+  color: #fff;
+}
