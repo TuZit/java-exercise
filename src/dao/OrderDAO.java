@@ -1,5 +1,6 @@
 package dao;
 
+import model.Customer;
 import model.Order;
 import model.OrderItem;
 
@@ -14,32 +15,20 @@ public class OrderDAO {
         this.connection = connection;
     }
 
-    // ======================
-    // 🟢 CREATE (Add Order)
-    // ======================
     public int addOrder(Order order) {
-        String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_phone, customer_address, total_price, status, created_at, updated_at) " +
-                "VALUES (?, ?, ?, ?, ?, ?, NOW(), NOW())";
-
+        String orderSql = "INSERT INTO orders (customer_id, total_price, status) VALUES (?, ?, ?)";
         String orderItemSql = "INSERT INTO order_item (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)";
-
         int orderId = -1;
 
         try {
-            // 🚀 Bắt đầu transaction
             connection.setAutoCommit(false);
 
-            // 1️⃣ Insert vào bảng orders
             try (PreparedStatement orderStmt = connection.prepareStatement(orderSql, Statement.RETURN_GENERATED_KEYS)) {
-                orderStmt.setString(1, order.getCustomerName());
-                orderStmt.setString(2, order.getCustomerEmail());
-                orderStmt.setString(3, order.getCustomerPhone());
-//                orderStmt.setString(4, order.getCustomerAddress());
-                orderStmt.setDouble(5, order.getTotalAmount());
-                orderStmt.setString(6, order.getStatus());
+                orderStmt.setInt(1, order.getCustomerId());
+                orderStmt.setDouble(2, order.getTotalAmount());
+                orderStmt.setString(3, order.getStatus());
                 orderStmt.executeUpdate();
 
-                // Lấy ID order vừa tạo
                 try (ResultSet rs = orderStmt.getGeneratedKeys()) {
                     if (rs.next()) {
                         orderId = rs.getInt(1);
@@ -47,7 +36,6 @@ public class OrderDAO {
                 }
             }
 
-            // 2️⃣ Insert danh sách order_item
             if (order.getItems() != null && !order.getItems().isEmpty()) {
                 try (PreparedStatement itemStmt = connection.prepareStatement(orderItemSql)) {
                     for (OrderItem item : order.getItems()) {
@@ -61,7 +49,6 @@ public class OrderDAO {
                 }
             }
 
-            // 3️⃣ Commit transaction
             connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -78,80 +65,47 @@ public class OrderDAO {
                 ex.printStackTrace();
             }
         }
-
         return orderId;
     }
 
-    // ======================
-    // 🔵 READ ALL Orders
-    // ======================
     public List<Order> getAllOrders() {
         List<Order> orders = new ArrayList<>();
-        String sql = "SELECT * FROM orders ORDER BY created_at DESC";
+        String sql = "SELECT o.*, c.name as customer_name, c.email as customer_email, c.phone as customer_phone, c.address as customer_address " +
+                     "FROM orders o JOIN customer c ON o.customer_id = c.id ORDER BY o.created_at DESC";
 
-        try (Statement stmt = connection.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-
+        try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
-                Order order = new Order(
-                        rs.getInt("id"),
-                        rs.getString("customer_name"),
-                        rs.getString("customer_email"),
-                        rs.getString("customer_phone"),
-                        rs.getDouble("total_amount"),
-                        rs.getString("status"),
-                        rs.getTimestamp("created_at"),
-                        rs.getTimestamp("updated_at")
-                );
-
-                // Load order items
+                Order order = mapRowToOrderWithCustomer(rs);
                 order.setItems(getOrderItemsByOrderId(order.getId()));
                 orders.add(order);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return orders;
     }
 
-    // ======================
-    // 🔍 READ One Order
-    // ======================
     public Order getOrderById(int id) {
-        String sql = "SELECT * FROM orders WHERE id = ?";
+        String sql = "SELECT o.*, c.name as customer_name, c.email as customer_email, c.phone as customer_phone, c.address as customer_address " +
+                     "FROM orders o JOIN customer c ON o.customer_id = c.id WHERE o.id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                Order order = new Order(
-                        rs.getInt("id"),
-                        rs.getString("customer_name"),
-                        rs.getString("customer_email"),
-                        rs.getString("customer_phone"),
-                        rs.getDouble("total_amount"),
-                        rs.getString("status"),
-                        rs.getTimestamp("created_at"),
-                        rs.getTimestamp("updated_at")
-                );
-                order.setItems(getOrderItemsByOrderId(id));
-                return order;
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    Order order = mapRowToOrderWithCustomer(rs);
+                    order.setItems(getOrderItemsByOrderId(id));
+                    return order;
+                }
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    // ======================
-    // 🔸 Helper - Get OrderItems
-    // ======================
     private List<OrderItem> getOrderItemsByOrderId(int orderId) {
         List<OrderItem> items = new ArrayList<>();
-        String sql = "SELECT * FROM order_items WHERE order_id = ?";
-
+        String sql = "SELECT * FROM order_item WHERE order_id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, orderId);
             ResultSet rs = stmt.executeQuery();
@@ -167,13 +121,9 @@ public class OrderDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return items;
     }
 
-    // ======================
-    // 🟡 UPDATE (Status)
-    // ======================
     public boolean updateOrderStatus(int orderId, String status) {
         String sql = "UPDATE orders SET status = ?, updated_at = NOW() WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
@@ -186,27 +136,24 @@ public class OrderDAO {
         }
     }
 
-    // ======================
-    // 🔴 DELETE
-    // ======================
     public boolean deleteOrder(int orderId) {
-        String deleteItems = "DELETE FROM order_items WHERE order_id = ?";
+        String deleteItems = "DELETE FROM order_item WHERE order_id = ?";
         String deleteOrder = "DELETE FROM orders WHERE id = ?";
         try {
             connection.setAutoCommit(false);
 
-            PreparedStatement stmtItems = connection.prepareStatement(deleteItems);
-            stmtItems.setInt(1, orderId);
-            stmtItems.executeUpdate();
+            try (PreparedStatement stmtItems = connection.prepareStatement(deleteItems)) {
+                stmtItems.setInt(1, orderId);
+                stmtItems.executeUpdate();
+            }
 
-            PreparedStatement stmtOrder = connection.prepareStatement(deleteOrder);
-            stmtOrder.setInt(1, orderId);
-            stmtOrder.executeUpdate();
+            try (PreparedStatement stmtOrder = connection.prepareStatement(deleteOrder)) {
+                stmtOrder.setInt(1, orderId);
+                stmtOrder.executeUpdate();
+            }
 
             connection.commit();
-            connection.setAutoCommit(true);
             return true;
-
         } catch (SQLException e) {
             e.printStackTrace();
             try {
@@ -215,6 +162,33 @@ public class OrderDAO {
                 ex.printStackTrace();
             }
             return false;
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
+    }
+
+    private Order mapRowToOrderWithCustomer(ResultSet rs) throws SQLException {
+        Order order = new Order(
+                rs.getInt("id"),
+                rs.getInt("customer_id"),
+                rs.getDouble("total_price"),
+                rs.getString("status"),
+                rs.getTimestamp("created_at"),
+                rs.getTimestamp("updated_at")
+        );
+        Customer customer = new Customer(
+                rs.getInt("customer_id"),
+                rs.getString("customer_name"),
+                rs.getString("customer_email"),
+                rs.getString("customer_phone"),
+                rs.getString("customer_address"),
+                null // createdAt for customer is not fetched here
+        );
+        order.setCustomer(customer);
+        return order;
     }
 }

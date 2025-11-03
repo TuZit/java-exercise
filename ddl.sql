@@ -37,18 +37,28 @@ CREATE TABLE product (
 );
 
 -- ===========================================================
+-- 👤 CUSTOMERS (Khách hàng)
+-- ===========================================================
+CREATE TABLE customer (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(20),
+    address TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ===========================================================
 -- 🧾 ORDERS (Đơn hàng)
 -- ===========================================================
 CREATE TABLE orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_name VARCHAR(100),
-    customer_email VARCHAR(100),
-    customer_phone VARCHAR(20),
-    customer_address TEXT,
+    customer_id INT,
     total_price DOUBLE DEFAULT 0,
     status ENUM('pending', 'paid', 'shipped', 'completed', 'cancelled') DEFAULT 'pending',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (customer_id) REFERENCES customer(id) ON DELETE SET NULL
 );
 
 -- ===========================================================
@@ -57,7 +67,7 @@ CREATE TABLE orders (
 CREATE TABLE order_item (
     id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
-    product_id INT NOT NULL,
+    product_id INT NULL,
     quantity INT NOT NULL,
     price DOUBLE NOT NULL,
     subtotal DOUBLE GENERATED ALWAYS AS (quantity * price) STORED,
@@ -94,6 +104,9 @@ VALUES
 INSERT INTO admin_user (username, password_hash, role)
 VALUES
 ('admin', 'admin123', 'admin');
+
+INSERT INTO customer (name, email, phone, address) VALUES
+('John Doe', 'john.doe@example.com', '123-456-7890', '123 Main St, Anytown, USA');
 
 -- ===========================================================
 -- ✅ DONE

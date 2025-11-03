@@ -5,130 +5,57 @@ import java.util.List;
 
 public class Order {
     private int id;
-    private String customerName;
-    private String customerEmail;
-    private String customerPhone;
+    private int customerId;
     private double totalAmount;
     private String status;
     private Date createdAt;
     private Date updatedAt;
-    private List<OrderItem> items; // Danh sách sản phẩm trong đơn hàng
+    private List<OrderItem> items;
+    private Customer customer; // To hold joined customer data
 
-    // 🔹 Constructor mặc định
     public Order() {}
 
-    // 🔹 Constructor đầy đủ (không bao gồm danh sách items)
-    public Order(int id, String customerName, String customerEmail, String customerPhone,
-                 double totalAmount, String status, Date createdAt, Date updatedAt) {
+    // Constructor for creating a new order
+    public Order(int customerId, double totalAmount, String status, List<OrderItem> items) {
+        this.customerId = customerId;
+        this.totalAmount = totalAmount;
+        this.status = status;
+        this.items = items;
+    }
+
+    // Constructor for retrieving an order from DB
+    public Order(int id, int customerId, double totalAmount, String status, Date createdAt, Date updatedAt) {
         this.id = id;
-        this.customerName = customerName;
-        this.customerEmail = customerEmail;
-        this.customerPhone = customerPhone;
+        this.customerId = customerId;
         this.totalAmount = totalAmount;
         this.status = status;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
 
-    // 🔹 Constructor đầy đủ (bao gồm danh sách items)
-    public Order(int id, String customerName, String customerEmail, String customerPhone,
-                 double totalAmount, String status, Date createdAt, Date updatedAt,
-                 List<OrderItem> items) {
-        this(id, customerName, customerEmail, customerPhone, totalAmount, status, createdAt, updatedAt);
-        this.items = items;
-    }
+    // Getters & Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    // ===========================
-    // 🔸 GETTERS & SETTERS
-    // ===========================
+    public int getCustomerId() { return customerId; }
+    public void setCustomerId(int customerId) { this.customerId = customerId; }
 
-    public int getId() {
-        return id;
-    }
+    public double getTotalAmount() { return totalAmount; }
+    public void setTotalAmount(double totalAmount) { this.totalAmount = totalAmount; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 
-    public String getCustomerName() {
-        return customerName;
-    }
+    public Date getCreatedAt() { return createdAt; }
+    public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
+    public Date getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(Date updatedAt) { this.updatedAt = updatedAt; }
 
-    public String getCustomerEmail() {
-        return customerEmail;
-    }
+    public List<OrderItem> getItems() { return items; }
+    public void setItems(List<OrderItem> items) { this.items = items; }
 
-    public void setCustomerEmail(String customerEmail) {
-        this.customerEmail = customerEmail;
-    }
-
-    public String getCustomerPhone() {
-        return customerPhone;
-    }
-
-    public void setCustomerPhone(String customerPhone) {
-        this.customerPhone = customerPhone;
-    }
-
-    public double getTotalAmount() {
-        return totalAmount;
-    }
-
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public List<OrderItem> getItems() {
-        return items;
-    }
-
-    public void setItems(List<OrderItem> items) {
-        this.items = items;
-    }
-
-    // ===========================
-    // 🔸 Helper method (optional)
-    // ===========================
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", customerName='" + customerName + '\'' +
-                ", customerEmail='" + customerEmail + '\'' +
-                ", customerPhone='" + customerPhone + '\'' +
-                ", totalAmount=" + totalAmount +
-                ", status='" + status + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                ", items=" + (items != null ? items.size() : 0) +
-                '}';
-    }
+    public Customer getCustomer() { return customer; }
+    public void setCustomer(Customer customer) { this.customer = customer; }
 }
+

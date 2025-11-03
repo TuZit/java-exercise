@@ -24,6 +24,7 @@ public class Server {
         server.createContext("/admin/products", new AdminProductController(connection));
         server.createContext("/admin/collections", new AdminCollectionController(connection));
         server.createContext("/admin/orders", new AdminOrderController(connection));
+        server.createContext("/api/admin/users", new AdminUserController(connection));
 
         // 🛍️ Storefront APIs
         server.createContext("/store/products", new StoreProductController(connection));
