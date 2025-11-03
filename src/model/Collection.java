@@ -1,13 +1,16 @@
 package model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Collection {
     private int id;
     private String name;
     private String description;
+    private String slug;
     private Date createdAt;
     private Date updatedAt;
+    private List<Product> products;
 
     public Collection() {
     }
@@ -16,6 +19,7 @@ public class Collection {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.slug = slug;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
@@ -33,6 +37,9 @@ public class Collection {
         return description;
     }
 
+    public String getSlug() {
+        return slug;
+    }
 
     public Date getCreatedAt() {
         return createdAt;
@@ -40,6 +47,10 @@ public class Collection {
 
     public Date getUpdatedAt() {
         return updatedAt;
+    }
+
+    public List<Product> getProducts() {
+        return products;
     }
 
     public void setId(int id) {
@@ -54,11 +65,19 @@ public class Collection {
         this.description = description;
     }
 
+    public void setSlug(String slug) {
+        this.slug = slug;
+    }
+
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

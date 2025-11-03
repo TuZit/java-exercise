@@ -1,6 +1,7 @@
 package dao;
 
 import model.Collection;
+import model.Product;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class CollectionDAO {
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, col.getName());
             stmt.setString(2, col.getDescription());
+            stmt.setString(3, col.getSlug());
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -70,12 +72,24 @@ public class CollectionDAO {
         return null;
     }
 
+    // READ ONE WITH PRODUCTS
+    public Collection getCollectionWithProducts(int id) {
+        Collection collection = getCollectionById(id);
+        if (collection != null) {
+            ProductDAO productDAO = new ProductDAO(this.connection);
+            List<Product> products = productDAO.getProductsByCollectionId(id);
+            collection.setProducts(products);
+        }
+        return collection;
+    }
+
     // UPDATE
     public boolean updateCollection(Collection col) {
         String sql = "UPDATE collection SET name=?, description=?, slug=?, updated_at=NOW() WHERE id=?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, col.getName());
             stmt.setString(2, col.getDescription());
+            stmt.setString(3, col.getSlug());
             stmt.setInt(4, col.getId());
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
