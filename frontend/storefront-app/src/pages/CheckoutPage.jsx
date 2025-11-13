@@ -1,12 +1,18 @@
 import React, { useState, useContext } from 'react';
 import { Form, Button, Row, Col, ListGroup, Card } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import apiClient from '../api';
 
 export default function CheckoutPage() {
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart: cartFromContext, clearCart } = useContext(CartContext);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Use the product from location state if available (for direct checkout), otherwise use the cart from context
+  const productFromState = location.state?.product;
+  const cart = productFromState ? [productFromState] : cartFromContext;
+  const isDirectCheckout = !!productFromState;
 
   const [customer, setCustomer] = useState({
     name: '',
@@ -39,7 +45,9 @@ export default function CheckoutPage() {
     try {
         const { data } = await apiClient.post('/storefront/orders', orderRequest);
         setSuccess(true);
-        clearCart();
+        if (!isDirectCheckout) {
+          clearCart();
+        }
         // navigate(`/order/${data.orderId}`); // Optional: redirect to an order confirmation page
     } catch (err) {
         setError(err.response?.data?.message || 'An error occurred');

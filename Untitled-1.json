@@ -1,0 +1,1099 @@
+{
+  "result": [
+    {
+      "_createdAt": "2025-03-05T05:36:30Z",
+      "_id": "c74b9f78-7638-4fda-ba73-3c68e4b400d8",
+      "_rev": "1RZU2hppKYEgUxuWs6R0g1",
+      "_system": {
+        "base": {
+          "id": "c74b9f78-7638-4fda-ba73-3c68e4b400d8",
+          "rev": "VAiBNstL1lx7N3BdoGit0Z"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-11-12T11:24:36Z",
+      "averageRating": 5,
+      "brand": {
+        "_ref": "3e981c4e-51b7-4c87-b24f-aa3a75e723d9",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories", "Airbuds"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "9b64c9bc6689",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9d449761da7e68b17b5fbd5aac5647d40b96903d-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Apple AirPods 3rd generation with Charging Case",
+      "price": 1700,
+      "ratingDistribution": {
+        "fiveStars": 1,
+        "fourStars": 0,
+        "oneStar": 0,
+        "threeStars": 0,
+        "twoStars": 0
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "apple-airpods-3rd-generation-with-charging-case"
+      },
+      "status": "new",
+      "stock": 8,
+      "totalReviews": 1,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-10-26T17:18:34Z",
+      "_id": "db13d26d-180a-4d04-aebc-33d0c8847231",
+      "_rev": "ar55bINAS2yYA4Z60854jd",
+      "_system": {
+        "base": {
+          "id": "db13d26d-180a-4d04-aebc-33d0c8847231",
+          "rev": "XxLWH4Sjw527YlyrteWmbh"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-11-12T11:24:37Z",
+      "brand": {
+        "_ref": "3e981c4e-51b7-4c87-b24f-aa3a75e723d9",
+        "_type": "reference"
+      },
+      "categories": ["Airbuds"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "98cd29e4130b",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c3bf5eaa474e9b5220b6839d6808d4a7022ecde6-500x500-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Apple AirPods Max",
+      "price": 699,
+      "slug": {
+        "_type": "slug",
+        "current": "apple-airpods-max"
+      },
+      "status": "new",
+      "stock": 5,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-03-05T06:29:38Z",
+      "_id": "d6ea9b75-4b8c-4cec-a91d-360af33835f5",
+      "_rev": "3eXxbXxQ4Kw2hYA6wpOH4H",
+      "_type": "product",
+      "_updatedAt": "2025-11-10T16:09:34Z",
+      "brand": {
+        "_ref": "f9600396-4716-423b-a193-f2e9e9f52b81",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories", "Cameras"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 8,
+      "images": [
+        {
+          "_key": "c0491e2c0977",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c6e0da93e884e6ab9fc7b2a884c6d28ad7f2020e-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Canon EOS 250D 24.1MP Full HD WI-FI DSLR Camera with 18-55mm",
+      "price": 750,
+      "slug": {
+        "_type": "slug",
+        "current": "canon-eos-250d-24-1mp-full-hd-wi-fi-dslr-camera-with-18-55mm"
+      },
+      "status": "sale",
+      "stock": 0,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T06:36:15Z",
+      "_id": "e4843383-2ebf-431d-bde3-029f32308d3b",
+      "_rev": "VE34pG1GFibXH72m4rsB8s",
+      "_system": {
+        "base": {
+          "id": "e4843383-2ebf-431d-bde3-029f32308d3b",
+          "rev": "VAiBNstL1lx7N3BdoGisqT"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-11-10T16:09:35Z",
+      "brand": {
+        "_ref": "2c894368-f2bd-47dc-8db6-1aa4dd837208",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 15,
+      "images": [
+        {
+          "_key": "6f4941257ada",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-480dae813a99d8331778f7a3edbc6cb98512208c-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isFeatured": true,
+      "name": "HP Laptop, AMD Ryzen 5 5500U Processor",
+      "price": 1659,
+      "slug": {
+        "_type": "slug",
+        "current": "hp-laptop-amd-ryzen-5-5500u-processor"
+      },
+      "status": "hot",
+      "stock": 33,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-10-26T17:36:09Z",
+      "_id": "a588919a-4aca-4819-87d3-bdecf7a09af5",
+      "_rev": "3eXxbXxQ4Kw2hYA6wpOHBm",
+      "_system": {
+        "base": {
+          "id": "cd8ddd13-0453-40e8-94dc-9fcaaafda919",
+          "rev": "PFsnaokhpGZnhxTXII6uyh"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-11-10T16:09:36Z",
+      "brand": {
+        "_ref": "236a1abb-fb87-4a9d-86ed-586f3037996c",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 15,
+      "images": [
+        {
+          "_key": "620c86137c61",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-b613899aa4e420139f6bf4fb5359e9b8ef8099b1-500x500-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isFeatured": true,
+      "name": "Intel 13th Gen Core i9 13900KF Raptor Lake Processor",
+      "price": 799,
+      "slug": {
+        "_type": "slug",
+        "current": "intel-13th-gen-core-i9-13900kf-raptor-lake-processor"
+      },
+      "status": "new",
+      "stock": 15,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-10-26T17:28:34Z",
+      "_id": "c31f0813-1ab4-4550-8f08-e0b0539964f8",
+      "_rev": "TlQn1SiNhkwL31kc1y7cIm",
+      "_system": {
+        "base": {
+          "id": "c31f0813-1ab4-4550-8f08-e0b0539964f8",
+          "rev": "PFsnaokhpGZnhxTXII6VtS"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-10-26T17:30:24Z",
+      "brand": {
+        "_ref": "7e0b93a8-dd48-49cf-a43c-f23115c93f2c",
+        "_type": "reference"
+      },
+      "categories": ["Airbuds"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "4f3757ffcc2e",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-312a32bc3b5017f870ef43b0af1bc372cd1ba5f2-500x500-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "JBL E55BT Wireless Bluetooth Headphone",
+      "price": 259,
+      "slug": {
+        "_type": "slug",
+        "current": "jbl-e55bt-wireless-bluetooth-headphone"
+      },
+      "status": "sale",
+      "stock": 30,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-10-26T17:32:01Z",
+      "_id": "cd8ddd13-0453-40e8-94dc-9fcaaafda919",
+      "_rev": "vw7Tuqms6eEAL1OdGUZ6ri",
+      "_system": {
+        "base": {
+          "id": "cd8ddd13-0453-40e8-94dc-9fcaaafda919",
+          "rev": "PFsnaokhpGZnhxTXII6uyh"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-11-08T06:53:43Z",
+      "brand": {
+        "_ref": "3e981c4e-51b7-4c87-b24f-aa3a75e723d9",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 7,
+      "images": [
+        {
+          "_key": "d20417370ea7",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6c9afa13da86391063f3de593cdce2824d60d450-500x500-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isFeatured": true,
+      "name": "MacBook Pro M4 Max Chip 16-inch (14-core CPU, 32-core GPU)",
+      "price": 3999,
+      "slug": {
+        "_type": "slug",
+        "current": "macbook-pro-m4-max-chip-16-inch-14-core-cpu-32-core-gpu"
+      },
+      "status": "hot",
+      "stock": 36,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T09:32:50Z",
+      "_id": "d74dee41-aea8-4d39-bc31-3388f440570e",
+      "_rev": "vw7Tuqms6eEAL1OdGUAkrg",
+      "_system": {
+        "base": {
+          "id": "d74dee41-aea8-4d39-bc31-3388f440570e",
+          "rev": "9DL93PMIDEmFA5vXkVOISf"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-11-08T06:34:39Z",
+      "averageRating": 4.5,
+      "brand": {
+        "_ref": "236a1abb-fb87-4a9d-86ed-586f3037996c",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "f51778d18665",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-38766ca9c29fa255abcfcaa9fd830b60054daf9d-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Mpow - CHE2S On-Ear Headphone with Mic for Kids",
+      "price": 550,
+      "ratingDistribution": {
+        "fiveStars": 1,
+        "fourStars": 1,
+        "oneStar": 0,
+        "threeStars": 0,
+        "twoStars": 0
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "mpow-che2s-on-ear-headphone-with-mic-for-kids"
+      },
+      "status": "hot",
+      "stock": 62,
+      "totalReviews": 2,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T09:31:35Z",
+      "_id": "0f194ed0-6ee6-4731-bc85-4faf7e78fd50",
+      "_rev": "0MievpbR7dKA4XFrKuKnY8",
+      "_type": "product",
+      "_updatedAt": "2025-11-05T02:37:14Z",
+      "brand": {
+        "_ref": "c4182963-6e3b-4c54-8067-d18938b6ade5",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories", "Smartphones", "Mobiles"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "ac9d23612ff5",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a182188c90b312b1b3951c1d5b9626ef854b10e-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Realme Note 60x (4/64GB)",
+      "price": 699,
+      "slug": {
+        "_type": "slug",
+        "current": "realme-note-60x-4-64gb"
+      },
+      "status": "sale",
+      "stock": 1,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T09:21:53Z",
+      "_id": "cafddc76-58f0-4787-8117-1071401d4683",
+      "_rev": "nJnEWwRnB0m21j73lZff1R",
+      "_system": {
+        "base": {
+          "id": "cafddc76-58f0-4787-8117-1071401d4683",
+          "rev": "PWbRQgrIvCcHHAJlHfxISN"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-11-04T14:47:20Z",
+      "averageRating": 5,
+      "brand": {
+        "_ref": "236a1abb-fb87-4a9d-86ed-586f3037996c",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories", "Smartphones"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 15,
+      "images": [
+        {
+          "_key": "075d4e3284b0",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-a4d5751b9772189b6536fd7720a885cb27be8c6b-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Samsung Galaxy S25 Ultra 5G 12/256GB",
+      "price": 1659,
+      "ratingDistribution": {
+        "fiveStars": 1,
+        "fourStars": 0,
+        "oneStar": 0,
+        "threeStars": 0,
+        "twoStars": 0
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "samsung-galaxy-s25-ultra-5g-12-256gb"
+      },
+      "status": "new",
+      "stock": 99,
+      "totalReviews": 1,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T09:48:42Z",
+      "_id": "816dfe8a-e718-4936-837d-cb773a167715",
+      "_rev": "utKzjuKrxgI1ty2SgM3SMW",
+      "_system": {
+        "base": {
+          "id": "816dfe8a-e718-4936-837d-cb773a167715",
+          "rev": "kHaIGshk50yx1CmPi0Y2S7"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-10-23T11:32:06Z",
+      "brand": {
+        "_ref": "7e0b93a8-dd48-49cf-a43c-f23115c93f2c",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 23,
+      "images": [
+        {
+          "_key": "708a5fe72f2d",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c2c857cae8cefda07a357637f3c90b239cd1ae73-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Sony WH-CH520 Wireless Headphones",
+      "price": 499,
+      "slug": {
+        "_type": "slug",
+        "current": "sony-wh-ch520-wireless-headphones"
+      },
+      "status": "sale",
+      "stock": 30,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T10:09:21Z",
+      "_id": "85d13d51-2645-4065-9402-17ce08b75e41",
+      "_rev": "AjEaurWNc6k4spOmvGTP7O",
+      "_system": {
+        "base": {
+          "id": "85d13d51-2645-4065-9402-17ce08b75e41",
+          "rev": "rAcFsbmUEkaBbV7JYO8QZK"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-10-23T11:32:21Z",
+      "brand": {
+        "_ref": "f9600396-4716-423b-a193-f2e9e9f52b81",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "18c022b40ce5",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-aa9f2fafc6e277a101e3b17bd4fa00b7d99c6b4b-300x300-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "987b128ce02c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bb2e9ea1d8410713c29ece7cb129ee74fc34d71-800x800-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isFeatured": true,
+      "name": "Speak 710 Portable Speaker for Music and Calls",
+      "price": 150,
+      "slug": {
+        "_type": "slug",
+        "current": "speak-710-portable-speaker-for-music-and-calls"
+      },
+      "status": "hot",
+      "stock": 65,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T10:10:56Z",
+      "_id": "18770b5d-ff30-428b-a912-b25e18fdb414",
+      "_rev": "ERyLr5WWqLIkgelpS47WMn",
+      "_system": {
+        "base": {
+          "id": "18770b5d-ff30-428b-a912-b25e18fdb414",
+          "rev": "kHaIGshk50yx1CmPi0Y8W5"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-10-23T11:31:45Z",
+      "brand": {
+        "_ref": "f9600396-4716-423b-a193-f2e9e9f52b81",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "c0738493a308",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-bdd6d2597360e46e94a86f7f31018a05d91ac68d-300x300-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "987b128ce02c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bb2e9ea1d8410713c29ece7cb129ee74fc34d71-800x800-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "f45f8faa0afb",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "name": "Wireless Bluetooth Speaker for Softphones",
+      "price": 220,
+      "slug": {
+        "_type": "slug",
+        "current": "wireless-bluetooth-speaker-for-softphones"
+      },
+      "status": "hot",
+      "stock": 59,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-10-26T17:33:40Z",
+      "_id": "db07b3ac-f38b-4bc6-b46f-02b2481226ca",
+      "_rev": "PFsnaokhpGZnhxTXII7Cw2",
+      "_system": {
+        "base": {
+          "id": "cd8ddd13-0453-40e8-94dc-9fcaaafda919",
+          "rev": "PFsnaokhpGZnhxTXII6uyh"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-10-26T17:35:04Z",
+      "brand": {
+        "_ref": "3e981c4e-51b7-4c87-b24f-aa3a75e723d9",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 15,
+      "images": [
+        {
+          "_key": "183131f8131d",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-3724c13132a5fd68eda2479ae549d55bda7447c7-500x500-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isFeatured": true,
+      "name": "iPad Pro M4 11-inch (WiFi+Cellular)",
+      "price": 1599,
+      "slug": {
+        "_type": "slug",
+        "current": "ipad-pro-m4-11-inch-wifi-cellular"
+      },
+      "status": "hot",
+      "stock": 20,
+      "variant": "gadget"
+    },
+    {
+      "_createdAt": "2025-02-17T05:48:04Z",
+      "_id": "e27d1744-37f0-4278-9517-947120ab9653",
+      "_rev": "ERyLr5WWqLIkgelpS47Voe",
+      "_system": {
+        "base": {
+          "id": "e27d1744-37f0-4278-9517-947120ab9653",
+          "rev": "PWbRQgrIvCcHHAJlHfxROB"
+        }
+      },
+      "_type": "product",
+      "_updatedAt": "2025-10-23T11:31:32Z",
+      "brand": {
+        "_ref": "3e981c4e-51b7-4c87-b24f-aa3a75e723d9",
+        "_type": "reference"
+      },
+      "categories": ["gadget accessories", "Smartphones", "Mobiles"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde illum expedita dolores aut nostrum, quidem placeat laborum nemo, beatae perspiciatis quae, sint tempore aliquid molestiae consequatur eum earum.",
+      "discount": 10,
+      "images": [
+        {
+          "_key": "8748391a5974",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-2a75ca8224d0256ac7048b421b82abb95fca0384-500x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e6176ad05bb9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cbea05f5e49e25766307efbc164568152c658f57-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5f58a4755362",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4bf833dd1a0dc0d8465e925971e763b7fdd706fb-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0d9a796139ef",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-66bca89e38ffd2a370db223e52ac7f051b93fe87-300x300-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5d6f2e558f18",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a0ed86eaba3270eb3e07650f17fce7c83132d3d-300x300-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isFeatured": true,
+      "name": "iPhone 16 Pro Max 128GB",
+      "price": 1299,
+      "slug": {
+        "_type": "slug",
+        "current": "iphone-16-pro-max-128gb"
+      },
+      "status": "hot",
+      "stock": 100,
+      "variant": "gadget"
+    }
+  ],
+  "syncTags": [
+    "s1:KBLJ3w",
+    "s1:j5zeeg",
+    "s1:gaAUJA",
+    "s1:u+zh5A",
+    "s1:/7mmIw",
+    "s1:769f1Q"
+  ],
+  "ms": 12
+}

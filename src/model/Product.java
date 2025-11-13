@@ -10,13 +10,14 @@ public class Product {
     private int quantity;
     private String description;
     private int collectionId;
+    private String imageURL;
     private Date createdAt;
     private Date updatedAt;
 
     public Product() {}
 
     public Product(int id, String name, String category, double price, int quantity,
-                   String description, int collectionId, Date createdAt, Date updatedAt) {
+                   String description, int collectionId, String imageURL, Date createdAt, Date updatedAt) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -24,6 +25,7 @@ public class Product {
         this.quantity = quantity;
         this.description = description;
         this.collectionId = collectionId;
+        this.imageURL = imageURL;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
@@ -36,6 +38,7 @@ public class Product {
     public int getQuantity() { return quantity; }
     public String getDescription() { return description; }
     public int getCollectionId() { return collectionId; }
+    public String getImageURL() { return imageURL; }
     public Date getCreatedAt() { return createdAt; }
     public Date getUpdatedAt() { return updatedAt; }
 
@@ -46,6 +49,7 @@ public class Product {
     public void setQuantity(int quantity) { this.quantity = quantity; }
     public void setDescription(String description) { this.description = description; }
     public void setCollectionId(int collectionId) { this.collectionId = collectionId; }
+    public void setImageURL(String imageURL) { this.imageURL = imageURL; }
     public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }
     public void setUpdatedAt(Date updatedAt) { this.updatedAt = updatedAt; }
 }

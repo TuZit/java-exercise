@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap';
 import apiClient from '../api';
 import { CartContext } from '../context/CartContext';
 
 export default function ProductPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [qty, setQty] = useState(1);
@@ -29,6 +30,10 @@ export default function ProductPage() {
   const handleAddToCart = () => {
     addToCart({ ...product, quantity: qty });
     // Optionally, navigate to cart or show a notification
+  };
+
+  const handleCheckoutNow = () => {
+    navigate('/checkout', { state: { product: { ...product, quantity: qty } } });
   };
 
   if (loading) {
@@ -109,6 +114,14 @@ export default function ProductPage() {
                   disabled={product.quantity === 0}
                 >
                   Add To Cart
+                </Button>
+                <Button
+                  onClick={handleCheckoutNow}
+                  variant='success'
+                  type='button'
+                  disabled={product.quantity === 0}
+                >
+                  Checkout Now
                 </Button>
               </ListGroup.Item>
             </ListGroup>
